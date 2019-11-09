@@ -1,20 +1,50 @@
+# call fordial defs 
+import dial_def
+
 # example dials
     #Batman Beyond
-dkr_01 = ['8', '10', '17', '3', 'Leap/Climb', 'Summon the Bats', 'Toughness', 'Outwit']
-dkr_02 = ['8', '11', '17', '2', 'Leap/Climb', 'Summon the Bats', 'Toughness', 'Outwit']
-dkr_03 = ['8', '11', '17', '3', 'Leap/Climb', 'Summon the Bats', 'Invulnerability', 'Outwit']
-dkr_04 = ['6', '11', '17', '2', 'Leap/Climb', 'Summon the Bats', 'Invulnerability', 'Close Combat Expert']
-dkr_05 = ['6', '10', '16', '1', 'Leap/Climb', '', 'Invulnerability', 'Close Combat Expert']
-dkr_06 = ['6', '10', '16', '2', 'Leap/Climb', '', 'Toughness', 'Close Combat Expert']
-dkr_07 = ['6', '9', '16', '2', 'Leap/Climb', '', 'Toughness', 'Outwit']
-dkr_08 = ['6', '9', '16', '1', 'Leap/Climb', '', 'Toughness', 'Outwit']
+dkr_01 = [
+    '8', '10', '17', '3', 'Leap/Climb',
+          'Summon the Bats', 'Toughness', 'Outwit',
+    ]
+dkr_02 = [
+    '8', '11', '17', '2', 'Leap/Climb',
+          'Summon the Bats', 'Toughness', 'Outwit',
+    ]
+dkr_03 = [
+    '8', '11', '17', '3', 'Leap/Climb',
+          'Summon the Bats', 'Invulnerability', 'Outwit',
+    ]
+dkr_04 = [
+    '6', '11', '17', '2', 'Leap/Climb',
+          'Summon the Bats', 'Invulnerability', 'Close Combat Expert',
+    ]
+dkr_05 = [
+    '6', '10', '16', '1', 'Leap/Climb',
+          '', 'Invulnerability', 'Close Combat Expert',
+    ]
+dkr_06 = [
+    '6', '10', '16', '2', 'Leap/Climb',
+          '', 'Toughness', 'Close Combat Expert',
+    ]
+dkr_07 = [
+    '6', '9', '16', '2', 'Leap/Climb',
+          '', 'Toughness', 'Outwit',
+    ]
+dkr_08 = [
+    '6', '9', '16', '1', 'Leap/Climb',
+          '', 'Toughness', 'Outwit',
+    ]
 dkr_09 = ['ko', 'ko', 'ko', 'ko']
 dkr_10 = ['ko', 'ko', 'ko', 'ko']
 dkr_11 = ['ko', 'ko', 'ko', 'ko']
 dkr_12 = ['ko', 'ko', 'ko', 'ko']
-The_Batman = {'name:
+batman = dial_def.dial('batman', 140, 1, 'batfamily', 6, 1,
+              'Batman can use the Charge \n and the Flight abilities',
+              dkr_01, dkr_02, dkr_03, dkr_04, dkr_05, dkr_06, dkr_07, dkr_08,
+              dkr_09, dkr_10, dkr_11, dkr_12)
 
-    #Batgirl
+#Batgirl
 batgirl_1 = ["9, 10, 17, 3"]
 batgirl_2 = ["9, 9, 16, 3"]
 batgirl_3 = ["8, 9, 17, 1"]
