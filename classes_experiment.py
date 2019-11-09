@@ -90,7 +90,7 @@ t1c1 = batman
 team = [t1c1.name]
 target = team[0]
 
-while true:
+while True:
 
 #determine current click
     if t1c1.click == 1:
@@ -151,7 +151,7 @@ while true:
             action = f'{action.title()} {target.title()}'
         else:
             action = 'action neither attack nor heal'
-    elif action != end:
+    elif action != 'end':
         action = 'target not on team'
     clear()
 
