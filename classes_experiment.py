@@ -85,12 +85,12 @@ batman = dial('batman', 140, 1, 'batfamily', 6, 1,
               dkr_01, dkr_02, dkr_03, dkr_04, dkr_05, dkr_06, dkr_07, dkr_08,
               dkr_09, dkr_10, dkr_11, dkr_12)
 
-
+action = 'none'
 t1c1 = batman
 team = [t1c1.name]
 target = team[0]
 
-while True:
+while action != 'end':
 
 #determine current click
     if t1c1.click == 1:
