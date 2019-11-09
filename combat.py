@@ -1,5 +1,54 @@
+# call for dial class definitions
+import dial_def
+
+# example dials
+    #Batman Beyond
+dkr_01 = [
+    '8', '10', '17', '3', 'Leap/Climb',
+          'Summon the Bats', 'Toughness', 'Outwit',
+    ]
+dkr_02 = [
+    '8', '11', '17', '2', 'Leap/Climb',
+          'Summon the Bats', 'Toughness', 'Outwit',
+    ]
+dkr_03 = [
+    '8', '11', '17', '3', 'Leap/Climb',
+          'Summon the Bats', 'Invulnerability', 'Outwit',
+    ]
+dkr_04 = [
+    '6', '11', '17', '2', 'Leap/Climb',
+          'Summon the Bats', 'Invulnerability', 'Close Combat Expert',
+    ]
+dkr_05 = [
+    '6', '10', '16', '1', 'Leap/Climb',
+          '', 'Invulnerability', 'Close Combat Expert',
+    ]
+dkr_06 = [
+    '6', '10', '16', '2', 'Leap/Climb',
+          '', 'Toughness', 'Close Combat Expert',
+    ]
+dkr_07 = [
+    '6', '9', '16', '2', 'Leap/Climb',
+          '', 'Toughness', 'Outwit',
+    ]
+dkr_08 = [
+    '6', '9', '16', '1', 'Leap/Climb',
+          '', 'Toughness', 'Outwit',
+    ]
+dkr_09 = ['ko', 'ko', 'ko', 'ko']
+dkr_10 = ['ko', 'ko', 'ko', 'ko']
+dkr_11 = ['ko', 'ko', 'ko', 'ko']
+dkr_12 = ['ko', 'ko', 'ko', 'ko']
+batman = dial_def.dial('batman', 140, 1, 'batfamily', 6, 1,
+              'Batman can use the Charge \n and the Flight abilities',
+              dkr_01, dkr_02, dkr_03, dkr_04, dkr_05, dkr_06, dkr_07, dkr_08,
+              dkr_09, dkr_10, dkr_11, dkr_12)
+
 error = 'what the fuck did you do?'
 action = 'none'
+t1c1 = batman
+team = [t1c1.name]
+target = team[0]
 
 # allow program to clear in terminal after every turn 
 from os import system, name
@@ -11,39 +60,6 @@ def clear():
     else: 
         _ = system('clear') 
 
-
-
-# example dials
-    #Batman Beyond
-dkr_01 = ['8', '10', '17', '3', 'Leap/Climb',
-          'Summon the Bats', 'Toughness', 'Outwit']
-dkr_02 = ['8', '11', '17', '2', 'Leap/Climb',
-          'Summon the Bats', 'Toughness', 'Outwit']
-dkr_03 = ['8', '11', '17', '3', 'Leap/Climb',
-          'Summon the Bats', 'Invulnerability', 'Outwit']
-dkr_04 = ['6', '11', '17', '2', 'Leap/Climb',
-          'Summon the Bats', 'Invulnerability', 'Close Combat Expert']
-dkr_05 = ['6', '10', '16', '1', 'Leap/Climb',
-          '', 'Invulnerability', 'Close Combat Expert']
-dkr_06 = ['6', '10', '16', '2', 'Leap/Climb',
-          '', 'Toughness', 'Close Combat Expert']
-dkr_07 = ['6', '9', '16', '2', 'Leap/Climb',
-          '', 'Toughness', 'Outwit']
-dkr_08 = ['6', '9', '16', '1', 'Leap/Climb',
-          '', 'Toughness', 'Outwit']
-dkr_09 = ['ko', 'ko', 'ko', 'ko']
-dkr_10 = ['ko', 'ko', 'ko', 'ko']
-dkr_11 = ['ko', 'ko', 'ko', 'ko']
-dkr_12 = ['ko', 'ko', 'ko', 'ko']
-batman = dial('batman', 140, 1, 'batfamily', 6, 1,
-              'Batman can use the Charge \n and the Flight abilities',
-              dkr_01, dkr_02, dkr_03, dkr_04, dkr_05, dkr_06, dkr_07, dkr_08,
-              dkr_09, dkr_10, dkr_11, dkr_12)
-
-action = 'none'
-t1c1 = batman
-team = [t1c1.name]
-target = team[0]
 
 while action != 'end':
 
@@ -90,7 +106,7 @@ while action != 'end':
 
     print(f'last action: {action}')
     action = input('action: ')
-    if action == 'surrender':
+    if action == 'end':
         break
                 ### use a break statment here to exit loop? ###
                 ### also sdd a help print for a list of viable commands ###

@@ -41,3 +41,5 @@ class dial:
         self.ten = ten
         self.eleven = eleven
         self.twelve = twelve
+
+# import character selection here? (including dial info)
