@@ -1,18 +1,21 @@
 # imports
 import requests
 import bs4
-ask_page = input('what page: ')
-site = 'https://www.hcrealms.com/forum/units/units_bbcode.php?id=bm058'
+from bs4 import BeautifulSoup
 
 # definitions
-page = requests.get(str(site+ask_page))
+site = 'https://www.hcrealms.com/forum/units/units_bbcode.php?id='
+ask_page = 'no'
 
-from bs4 import BeautifulSoup
+
+page = requests.get(
+    'https://www.hcrealms.com/forum/units/units_bbcode.php?id=bm058'
+    )
 soup = BeautifulSoup(page.content, 'html.parser')
 print(soup.prettify())
 
 
 
 
-print(page.status_code)
+
 input("googbye cruel world!")
